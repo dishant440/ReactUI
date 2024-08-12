@@ -12,11 +12,11 @@ export default function StatusCard() {
     eventSource.onmessage = (event) => {
       try {
         const data = JSON.parse(event.data);
-        setStatus(data.status || 'IDLE');
-        setType(data.type || 'CONTINUOUS');
-        setAmount(data.amount || 0);
-        setQuantity(data.quantity || 0);
-        setRate(data.rate || 0);
+        setStatus(data.transactionStatus || 'IDLE');
+        setType(data.transactionRunningPrice || 'CONTINUOUS');
+        setAmount(data.quantityRunningPrice || 0);
+        setQuantity(data.rareRunningPrice || 0);
+        setRate(data.transactionNozzle || 0);
       } catch (error) {
         alert("Error getting the data ...")
       }
