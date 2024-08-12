@@ -10,7 +10,7 @@ export default function NavBar() {
         <Button
             value="Home"
             styling="bg-blue-500 px-3 py-2 rounded text-white"
-            onClick={()=>navigate("/CZAR")}
+            onClick={()=>navigate("/")}
           />
           <Button
             value="Price Configuration"
